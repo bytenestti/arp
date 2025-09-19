@@ -1,0 +1,221 @@
+{
+  "contact": {
+    "endpoint": "POST /contact",
+    "request_body": {
+      "name": "João Silva",
+      "email": "joao@email.com",
+      "phone": "(11) 99999-9999",
+      "service": "poda",
+      "message": "Preciso de um orçamento para poda de árvores no meu jardim."
+    },
+    "success_response": {
+      "success": true,
+      "message": "Orçamento solicitado com sucesso! Entraremos em contato em breve.",
+      "id": "contact_123456789"
+    },
+    "error_response": {
+      "error": "Nome, email e telefone são obrigatórios"
+    }
+  },
+  "services": {
+    "get_all": {
+      "endpoint": "GET /services",
+      "response": {
+        "services": [
+          {
+            "id": "poda",
+            "title": "Poda e Corte de Árvores",
+            "description": "Serviços especializados de poda, corte e remoção de árvores com segurança e técnica profissional.",
+            "features": [
+              "Poda de formação e manutenção",
+              "Corte de árvores de grande porte",
+              "Remoção de árvores mortas",
+              "Tratamento de pragas e doenças"
+            ],
+            "price_range": "A partir de R$ 150",
+            "duration": "2-4 horas"
+          },
+          {
+            "id": "jardinagem",
+            "title": "Jardinagem Profissional",
+            "description": "Cuidados especializados para jardins, gramados e áreas verdes com técnicas modernas.",
+            "features": [
+              "Plantio e manutenção de jardins",
+              "Corte e manutenção de gramados",
+              "Paisagismo e design",
+              "Irrigação e fertilização"
+            ],
+            "price_range": "A partir de R$ 200",
+            "duration": "3-6 horas"
+          },
+          {
+            "id": "limpeza",
+            "title": "Limpeza Pós-Obra",
+            "description": "Serviços completos de limpeza e organização após reformas e construções.",
+            "features": [
+              "Remoção de entulhos",
+              "Limpeza profunda de canteiros",
+              "Organização de materiais",
+              "Finalização de obras"
+            ],
+            "price_range": "A partir de R$ 300",
+            "duration": "4-8 horas"
+          }
+        ],
+        "total": 3
+      }
+    },
+    "get_by_id": {
+      "endpoint": "GET /services/{id}",
+      "response": {
+        "id": "poda",
+        "title": "Poda e Corte de Árvores",
+        "description": "Serviços especializados de poda, corte e remoção de árvores com segurança e técnica profissional.",
+        "features": [
+          "Poda de formação e manutenção",
+          "Corte de árvores de grande porte",
+          "Remoção de árvores mortas",
+          "Tratamento de pragas e doenças"
+        ],
+        "price_range": "A partir de R$ 150",
+        "duration": "2-4 horas"
+      }
+    },
+    "get_by_category": {
+      "endpoint": "GET /services?category={category}",
+      "response": {
+        "services": [
+          {
+            "id": "jardinagem",
+            "title": "Jardinagem Profissional",
+            "description": "Cuidados especializados para jardins, gramados e áreas verdes com técnicas modernas.",
+            "features": [
+              "Plantio e manutenção de jardins",
+              "Corte e manutenção de gramados",
+              "Paisagismo e design",
+              "Irrigação e fertilização"
+            ],
+            "price_range": "A partir de R$ 200",
+            "duration": "3-6 horas"
+          }
+        ],
+        "total": 1
+      }
+    },
+    "search": {
+      "endpoint": "GET /services/search?category={category}&price_min={min}&price_max={max}&search={term}",
+      "response": {
+        "services": [
+          {
+            "id": "poda",
+            "title": "Poda e Corte de Árvores",
+            "description": "Serviços especializados de poda, corte e remoção de árvores com segurança e técnica profissional.",
+            "features": [
+              "Poda de formação e manutenção",
+              "Corte de árvores de grande porte",
+              "Remoção de árvores mortas",
+              "Tratamento de pragas e doenças"
+            ],
+            "price_range": "A partir de R$ 150",
+            "duration": "2-4 horas"
+          }
+        ],
+        "total": 1,
+        "filters_applied": {
+          "category": "poda",
+          "price_min": 100,
+          "price_max": 500,
+          "search": "árvores"
+        }
+      }
+    }
+  },
+  "about": {
+    "company_info": {
+      "endpoint": "GET /about",
+      "response": {
+        "company": {
+          "name": "ARPManutenções",
+          "description": "Somos uma empresa especializada em serviços de manutenção e jardinagem, com anos de experiência no mercado. Nossa missão é transformar espaços verdes com qualidade, segurança e respeito ao meio ambiente.",
+          "mission": "Transformar espaços verdes com qualidade, segurança e respeito ao meio ambiente.",
+          "values": [
+            {
+              "title": "Qualidade Garantida",
+              "description": "Utilizamos apenas materiais de primeira qualidade e técnicas comprovadas."
+            },
+            {
+              "title": "Segurança em Primeiro Lugar",
+              "description": "Seguimos rigorosamente todos os protocolos de segurança do trabalho."
+            },
+            {
+              "title": "Sustentabilidade",
+              "description": "Praticamos métodos sustentáveis e respeitamos o meio ambiente."
+            }
+          ],
+          "team": {
+            "title": "Nossa Equipe",
+            "description": "Profissionais qualificados e experientes, prontos para atender suas necessidades com excelência e dedicação."
+          },
+          "equipment": {
+            "title": "Equipamentos Modernos",
+            "description": "Utilizamos equipamentos de última geração para garantir eficiência e segurança em todos os nossos serviços."
+          },
+          "personalized_service": {
+            "title": "Atendimento Personalizado",
+            "description": "Cada projeto é único. Desenvolvemos soluções personalizadas para atender às suas necessidades específicas."
+          },
+          "contact_info": {
+            "phone": ["(11) 99999-9999", "(11) 3333-3333"],
+            "email": ["contato@arpmanutencoes.com", "orcamento@arpmanutencoes.com"],
+            "address": "São Paulo - SP - Atendemos toda a região metropolitana",
+            "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
+          },
+          "statistics": {
+            "projects_completed": 500,
+            "years_experience": 5,
+            "customer_satisfaction": 100
+          }
+        }
+      }
+    },
+    "statistics": {
+      "endpoint": "GET /about/statistics",
+      "response": {
+        "statistics": {
+          "projects_completed": 500,
+          "years_experience": 5,
+          "customer_satisfaction": 100
+        }
+      }
+    },
+    "contact_info": {
+      "endpoint": "GET /about/contact",
+      "response": {
+        "contact_info": {
+          "phone": ["(11) 99999-9999", "(11) 3333-3333"],
+          "email": ["contato@arpmanutencoes.com", "orcamento@arpmanutencoes.com"],
+          "address": "São Paulo - SP - Atendemos toda a região metropolitana",
+          "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
+        }
+      }
+    }
+  },
+  "error_responses": {
+    "validation_error": {
+      "error": "Dados inválidos",
+      "details": {
+        "name": ["Este campo é obrigatório"],
+        "email": ["Email inválido"],
+        "phone": ["Telefone é obrigatório"]
+      }
+    },
+    "server_error": {
+      "error": "Erro interno do servidor",
+      "code": "INTERNAL_SERVER_ERROR"
+    },
+    "not_found": {
+      "error": "Recurso não encontrado",
+      "code": "NOT_FOUND"
+    }
+  }
+}

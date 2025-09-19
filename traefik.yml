@@ -1,0 +1,40 @@
+# Configuração do Traefik
+api:
+  dashboard: true
+  insecure: true
+
+entryPoints:
+  web:
+    address: ":80"
+    http:
+      redirections:
+        entrypoint:
+          to: websecure
+          scheme: https
+          permanent: true
+  websecure:
+    address: ":443"
+
+providers:
+  docker:
+    endpoint: "unix:///var/run/docker.sock"
+    exposedByDefault: false
+    network: app-network
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      tlsChallenge: {}
+      email: contato@arpmanutencoes.com
+      storage: /letsencrypt/acme.json
+
+log:
+  level: INFO
+
+accessLog:
+  format: json
+
+metrics:
+  prometheus:
+    addEntryPointsLabels: true
+    addServicesLabels: true

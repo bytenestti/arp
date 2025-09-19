@@ -1,0 +1,73 @@
+version: '3.8'
+
+services:
+  # Aplicação Next.js
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - env.docker
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`arpmanutencoes.com`) || Host(`www.arpmanutencoes.com`)"
+      - "traefik.http.routers.app.entrypoints=web"
+      - "traefik.http.routers.app-secure.rule=Host(`arpmanutencoes.com`) || Host(`www.arpmanutencoes.com`)"
+      - "traefik.http.routers.app-secure.entrypoints=websecure"
+      - "traefik.http.routers.app-secure.tls.certresolver=myresolver"
+      - "traefik.http.services.app.loadbalancer.server.port=3000"
+      - "traefik.docker.network=app-network"
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # Serviço de desenvolvimento (opcional)
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
+    networks:
+      - app-network
+    profiles:
+      - dev
+
+  # Traefik (proxy reverso e load balancer)
+  traefik:
+    image: traefik:v3.0
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=contato@arpmanutencoes.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"  # Dashboard do Traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+    networks:
+      - app-network
+    profiles:
+      - production
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:
+  next_cache:
