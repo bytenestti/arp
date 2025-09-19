@@ -27,7 +27,8 @@
     "setup-vps-ip": "chmod +x setup-177-153-51-81.sh && ./setup-177-153-51-81.sh",
     "deploy-ip": "chmod +x deploy-ip-specific.sh && ./deploy-ip-specific.sh",
     "fix-network": "chmod +x fix-network.sh && ./fix-network.sh",
-    "diagnose-connectivity": "chmod +x diagnose-connectivity.sh && ./diagnose-connectivity.sh"
+    "diagnose-connectivity": "chmod +x diagnose-connectivity.sh && ./diagnose-connectivity.sh",
+    "fix-app-connectivity": "chmod +x fix-app-connectivity.sh && ./fix-app-connectivity.sh"
   },
   "dependencies": {
     "axios": "^1.12.2",
