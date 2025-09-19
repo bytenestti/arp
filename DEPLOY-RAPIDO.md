@@ -15,9 +15,6 @@ ssh root@SEU_IP_VPS
 mkdir -p /opt/arpmanutencoes
 cd /opt/arpmanutencoes
 
-# Clonar repositório (substitua pela sua URL)
-git clone https://github.com/SEU_USUARIO/arpmanutencoes-front.git .
-
 # Configurar ambiente
 cp env.docker .env
 nano .env  # Editar configurações
