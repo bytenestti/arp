@@ -14,7 +14,7 @@ services:
       - "traefik.http.routers.app-secure.entrypoints=websecure"
       - "traefik.http.routers.app-secure.tls.certresolver=myresolver"
       - "traefik.http.services.app.loadbalancer.server.port=3000"
-      - "traefik.docker.network=app-network"
+      - "traefik.docker.network=arp_app-network"
     restart: unless-stopped
     networks:
       - app-network
@@ -45,7 +45,7 @@ services:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
-      - "--providers.docker.network=app-network"
+      - "--providers.docker.network=arp_app-network"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
