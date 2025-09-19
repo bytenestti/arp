@@ -1,5 +1,5 @@
 import api from './api';
-import { Service, ServicesResponse, ApiError } from '../types/api';
+import { Service, ServicesResponse } from '../types/api';
 
 export class ServicesService {
   /**
@@ -30,9 +30,10 @@ export class ServicesService {
     try {
       const response = await api.get<ServicesResponse>('/services');
       return response.data.services;
-    } catch (error: any) {
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao buscar serviços');
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao buscar serviços');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }
@@ -62,9 +63,10 @@ export class ServicesService {
     try {
       const response = await api.get<Service>(`/services/${serviceId}`);
       return response.data;
-    } catch (error: any) {
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao buscar serviço');
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao buscar serviço');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }
@@ -99,9 +101,10 @@ export class ServicesService {
     try {
       const response = await api.get<ServicesResponse>(`/services?category=${category}`);
       return response.data.services;
-    } catch (error: any) {
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao buscar serviços por categoria');
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao buscar serviços por categoria');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }
@@ -154,9 +157,10 @@ export class ServicesService {
 
       const response = await api.get<ServicesResponse>(`/services/search?${params.toString()}`);
       return response.data.services;
-    } catch (error: any) {
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao buscar serviços');
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao buscar serviços');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }

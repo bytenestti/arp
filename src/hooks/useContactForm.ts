@@ -32,9 +32,9 @@ export const useContactForm = () => {
         setErrorMessage('Erro ao enviar formulário');
         return false;
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setSubmitStatus('error');
-      setErrorMessage(error.message || 'Erro de conexão. Tente novamente.');
+      setErrorMessage(error instanceof Error ? error.message : 'Erro de conexão. Tente novamente.');
       return false;
     } finally {
       setIsSubmitting(false);

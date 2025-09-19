@@ -1,5 +1,5 @@
 import api from './api';
-import { CompanyInfo, AboutResponse, ApiError } from '../types/api';
+import { CompanyInfo, AboutResponse } from '../types/api';
 
 export class AboutService {
   /**
@@ -56,9 +56,10 @@ export class AboutService {
     try {
       const response = await api.get<AboutResponse>('/about');
       return response.data.company;
-    } catch (error: any) {
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao buscar informações da empresa');
+    } catch (error: unknown) {
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao buscar informações da empresa');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }
@@ -132,9 +133,9 @@ export class AboutService {
     customer_satisfaction: number;
   }> {
     try {
-      const response = await api.get<{ statistics: any }>('/about/statistics');
+      const response = await api.get<{ statistics: { projects_completed: number; years_experience: number; customer_satisfaction: number } }>('/about/statistics');
       return response.data.statistics;
-    } catch (error: any) {
+    } catch {
       // Retorna estatísticas padrão em caso de erro
       return this.getDefaultCompanyInfo().statistics;
     }
@@ -161,9 +162,9 @@ export class AboutService {
     working_hours: string[];
   }> {
     try {
-      const response = await api.get<{ contact_info: any }>('/about/contact');
+      const response = await api.get<{ contact_info: { phone: string[]; email: string[]; address: string; working_hours: string[] } }>('/about/contact');
       return response.data.contact_info;
-    } catch (error: any) {
+    } catch {
       // Retorna informações de contato padrão em caso de erro
       return this.getDefaultCompanyInfo().contact_info;
     }

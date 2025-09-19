@@ -57,7 +57,7 @@ export default function Contact() {
         setSubmitStatus('error');
         setErrorMessage(data.error || 'Erro ao enviar formulário');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
       setErrorMessage('Erro de conexão. Tente novamente.');
     } finally {

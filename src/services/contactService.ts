@@ -1,5 +1,5 @@
 import api from './api';
-import { ContactFormData, ContactResponse, ApiError } from '../types/api';
+import { ContactFormData, ContactResponse } from '../types/api';
 
 export class ContactService {
   /**
@@ -23,10 +23,11 @@ export class ContactService {
     try {
       const response = await api.post<ContactResponse>('/contact', formData);
       return response.data;
-    } catch (error: any) {
+    } catch (error: unknown) {
       // Tratamento de erro específico para o serviço de contato
-      if (error.response?.data) {
-        throw new Error(error.response.data.error || 'Erro ao enviar formulário');
+      if (error && typeof error === 'object' && 'response' in error) {
+        const apiError = error as { response?: { data?: { error?: string } } };
+        throw new Error(apiError.response?.data?.error || 'Erro ao enviar formulário');
       }
       throw new Error('Erro de conexão. Tente novamente.');
     }
