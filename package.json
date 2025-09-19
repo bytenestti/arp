@@ -20,7 +20,10 @@
     "deploy:monitor": "chmod +x deploy.sh && ./deploy.sh monitor",
     "deploy:backup": "chmod +x deploy.sh && ./deploy.sh backup",
     "deploy:quick": "chmod +x quick-deploy.sh && ./quick-deploy.sh",
-    "deploy:vps-simple": "chmod +x deploy-vps.sh && ./deploy-vps.sh"
+    "deploy:vps-simple": "chmod +x deploy-vps.sh && ./deploy-vps.sh",
+    "diagnose": "chmod +x diagnose.sh && ./diagnose.sh",
+    "fix-connection": "chmod +x fix-connection.sh && ./fix-connection.sh",
+    "fix-ssl": "chmod +x fix-ssl.sh && ./fix-ssl.sh"
   },
   "dependencies": {
     "axios": "^1.12.2",
