@@ -17,27 +17,32 @@ export const metadata: Metadata = {
     default: "ARP Manutenções - Especialistas em Poda e Jardinagem | Ouro Preto/MG",
     template: "%s | ARP Manutenções"
   },
-  description: "Serviços profissionais de poda e corte de árvores, jardinagem e limpeza pós-obra em Ouro Preto/MG. Transformamos seu espaço com qualidade, segurança e experiência de 5+ anos.",
+  description: "ARP Manutenções oferece serviços profissionais de poda e corte de árvores, jardinagem e limpeza pós-obra em Ouro Preto/MG. Especialistas em manutenção de jardins, paisagismo e cuidado de árvores. Atendemos toda a região de Ouro Preto com qualidade e segurança.",
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/favicon.svg',
   },
   keywords: [
-    "poda de árvores",
-    "corte de árvores", 
-    "jardinagem profissional",
-    "limpeza pós-obra",
-    "manutenção de jardim",
-    "paisagismo",
+    "poda de árvores Ouro Preto",
+    "corte de árvores MG", 
+    "jardinagem profissional Ouro Preto",
+    "limpeza pós-obra Minas Gerais",
+    "manutenção de jardim Ouro Preto",
+    "paisagismo Ouro Preto",
+    "poda árvores Ouro Preto MG",
+    "jardinagem Ouro Preto",
+    "serviços jardinagem Ouro Preto",
+    "poda árvores Minas Gerais",
+    "corte árvores Ouro Preto",
+    "limpeza jardim Ouro Preto",
+    "manutenção jardim MG",
+    "paisagista Ouro Preto",
+    "jardineiro Ouro Preto",
     "Ouro Preto",
     "Minas Gerais",
     "MG",
-    "árvores",
-    "jardim",
-    "poda",
-    "corte",
-    "limpeza"
+    "ARP Manutenções"
   ],
   authors: [{ name: "ARP Manutenções" }],
   creator: "ARP Manutenções",
@@ -110,19 +115,61 @@ export default function RootLayout({
           "width": 200,
           "height": 60
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+55-31-99851-2887",
-          "contactType": "customer service",
-          "areaServed": "BR",
-          "availableLanguage": "Portuguese"
-        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-31-99851-2887",
+            "contactType": "customer service",
+            "areaServed": ["Ouro Preto", "Minas Gerais", "BR"],
+            "availableLanguage": "Portuguese",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "07:00",
+              "closes": "18:00"
+            }
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+55-31-99851-2887",
+            "contactType": "customer service",
+            "areaServed": ["Ouro Preto", "Minas Gerais", "BR"],
+            "availableLanguage": "Portuguese",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "07:00",
+              "closes": "12:00"
+            }
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
+          "streetAddress": "Ouro Preto",
           "addressLocality": "Ouro Preto",
-          "addressRegion": "MG",
+          "addressRegion": "Minas Gerais",
+          "postalCode": "35400-000",
           "addressCountry": "BR"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-20.3856",
+          "longitude": "-43.5036"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Ouro Preto",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "Minas Gerais"
+            }
+          },
+          {
+            "@type": "State", 
+            "name": "Minas Gerais"
+          }
+        ],
         "sameAs": [
           "https://www.instagram.com/arp_manutencoes",
           "https://wa.me/553198512887"
@@ -166,31 +213,51 @@ export default function RootLayout({
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Serviços de Manutenção",
+          "name": "Serviços de Manutenção e Jardinagem",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Poda e Corte de Árvores",
-                "description": "Serviços especializados de poda, corte e remoção de árvores"
-              }
+                "name": "Poda de Árvores Ouro Preto",
+                "description": "Serviços especializados de poda e corte de árvores em Ouro Preto/MG",
+                "areaServed": "Ouro Preto"
+              },
+              "priceRange": "R$ 150+",
+              "availability": "InStock"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Jardinagem Profissional",
-                "description": "Cuidados especializados para jardins, gramados e áreas verdes"
-              }
+                "name": "Corte de Árvores Ouro Preto",
+                "description": "Remoção segura de árvores de grande porte em Ouro Preto",
+                "areaServed": "Ouro Preto"
+              },
+              "priceRange": "R$ 200+",
+              "availability": "InStock"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Limpeza Pós-Obra",
-                "description": "Serviços completos de limpeza e organização após reformas"
-              }
+                "name": "Jardinagem Profissional Ouro Preto",
+                "description": "Serviços profissionais de jardinagem e paisagismo em Ouro Preto/MG",
+                "areaServed": "Ouro Preto"
+              },
+              "priceRange": "R$ 200+",
+              "availability": "InStock"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Limpeza Pós-Obra Ouro Preto",
+                "description": "Serviços de limpeza e organização após reformas em Ouro Preto",
+                "areaServed": "Ouro Preto"
+              },
+              "priceRange": "R$ 300+",
+              "availability": "InStock"
             }
           ]
         }
