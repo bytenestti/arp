@@ -124,7 +124,7 @@ export default function RootLayout({
           "addressCountry": "BR"
         },
         "sameAs": [
-          "https://www.instagram.com/arpmanutencoes",
+          "https://www.instagram.com/arp_manutencoes",
           "https://wa.me/553198512887"
         ]
       },

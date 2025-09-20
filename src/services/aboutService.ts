@@ -45,7 +45,7 @@ export class AboutService {
    *       "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
    *     },
    *     "statistics": {
-   *       "projects_completed": 500,
+   *       "projects_completed": "50+",
    *       "years_experience": 5,
    *       "customer_satisfaction": 100
    *     }
@@ -107,7 +107,7 @@ export class AboutService {
         working_hours: ['Segunda a Sexta: 7h às 18h', 'Sábado: 7h às 12h']
       },
       statistics: {
-        projects_completed: 500,
+        projects_completed: "50+",
         years_experience: 5,
         customer_satisfaction: 100
       }
@@ -121,7 +121,7 @@ export class AboutService {
    * Exemplo de resposta da API FastAPI:
    * {
    *   "statistics": {
-   *     "projects_completed": 500,
+   *     "projects_completed": "50+",
    *     "years_experience": 5,
    *     "customer_satisfaction": 100
    *   }
