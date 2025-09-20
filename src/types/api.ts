@@ -57,7 +57,7 @@ export interface CompanyInfo {
     working_hours: string[];
   };
   statistics: {
-    projects_completed: number;
+    projects_completed: number | string;
     years_experience: number;
     customer_satisfaction: number;
   };

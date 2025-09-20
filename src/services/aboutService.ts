@@ -128,12 +128,12 @@ export class AboutService {
    * }
    */
   static async getCompanyStatistics(): Promise<{
-    projects_completed: number;
+    projects_completed: number | string;
     years_experience: number;
     customer_satisfaction: number;
   }> {
     try {
-      const response = await api.get<{ statistics: { projects_completed: number; years_experience: number; customer_satisfaction: number } }>('/about/statistics');
+      const response = await api.get<{ statistics: { projects_completed: number | string; years_experience: number; customer_satisfaction: number } }>('/about/statistics');
       return response.data.statistics;
     } catch {
       // Retorna estatísticas padrão em caso de erro
