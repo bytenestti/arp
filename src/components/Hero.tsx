@@ -15,7 +15,8 @@ export default function Hero() {
           {/* Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Transformamos seu{' '}
+              <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">ARP Manutenções</span>{' '}
+              transforma seu{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">espaço verde</span>{' '}
               com{' '}
               <span className="bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text text-transparent">excelência</span>
