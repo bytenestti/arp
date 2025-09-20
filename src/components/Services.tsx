@@ -150,7 +150,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="group">
               <div className="text-4xl font-bold text-green-600 mb-2 group-hover:scale-105 transition-transform duration-300">
-                +500
+                +50
               </div>
               <div className="text-gray-600 font-medium">
                 Projetos Realizados
