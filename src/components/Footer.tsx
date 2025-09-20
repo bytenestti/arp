@@ -78,9 +78,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-green-800/30 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 ARPManutenções. Todos os direitos reservados.
-            </p>
+            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+              <p className="text-gray-400 text-sm">
+                © 2024 ARPManutenções. Todos os direitos reservados.
+              </p>
+              <p className="text-gray-500 text-xs">
+                Desenvolvido por <span className="text-green-400 font-medium">bytenest</span>
+              </p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-green-400 text-sm transition-all duration-300 hover:underline">
                 Política de Privacidade
