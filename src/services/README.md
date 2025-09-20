@@ -41,7 +41,7 @@ import { ContactService } from '@/services';
 const formData = {
   name: 'João Silva',
   email: 'joao@email.com',
-  phone: '(11) 99999-9999',
+  phone: '(31) 99851-2887',
   service: 'poda',
   message: 'Preciso de um orçamento'
 };
@@ -61,7 +61,7 @@ if (!validation.isValid) {
 
 // Formatar telefone
 const formattedPhone = ContactService.formatPhone('11999999999');
-console.log(formattedPhone); // (11) 99999-9999
+console.log(formattedPhone); // (31) 99851-2887
 ```
 
 ### 2. Serviço de Serviços
@@ -185,7 +185,7 @@ Os serviços esperam os seguintes endpoints na API FastAPI:
 {
   "name": "João Silva",
   "email": "joao@email.com",
-  "phone": "(11) 99999-9999",
+  "phone": "(31) 99851-2887",
   "service": "poda",
   "message": "Preciso de um orçamento para poda de árvores no meu jardim."
 }
@@ -245,9 +245,9 @@ Os serviços esperam os seguintes endpoints na API FastAPI:
       }
     ],
     "contact_info": {
-      "phone": ["(11) 99999-9999", "(11) 3333-3333"],
-      "email": ["contato@arpmanutencoes.com", "orcamento@arpmanutencoes.com"],
-      "address": "São Paulo - SP - Atendemos toda a região metropolitana",
+      "phone": ["(31) 99851-2887"],
+      "email": ["contato@arpmanutencoes.com"],
+      "address": "Ouro Preto - MG - Atendemos toda a região",
       "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
     },
     "statistics": {

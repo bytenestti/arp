@@ -67,8 +67,8 @@ if [ ! -f ".env" ]; then
         
         # Editar configurações específicas
         sed -i 's/NEXT_PUBLIC_SITE_URL=.*/NEXT_PUBLIC_SITE_URL=https:\/\/arpmanutencoes.com/' .env
-        sed -i 's/NEXT_PUBLIC_PHONE=.*/NEXT_PUBLIC_PHONE=(31) 99999-9999/' .env
-        sed -i 's/NEXT_PUBLIC_WHATSAPP=.*/NEXT_PUBLIC_WHATSAPP=5531999999999/' .env
+        sed -i 's/NEXT_PUBLIC_PHONE=.*/NEXT_PUBLIC_PHONE=(31) 99851-2887/' .env
+        sed -i 's/NEXT_PUBLIC_WHATSAPP=.*/NEXT_PUBLIC_WHATSAPP=553198512887/' .env
         success "Configurações específicas aplicadas"
     else
         error "Arquivo env.docker não encontrado!"

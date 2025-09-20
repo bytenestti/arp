@@ -101,8 +101,8 @@ nano .env
 ```bash
 # Editar as seguintes variáveis:
 NEXT_PUBLIC_SITE_URL=https://arpmanutencoes.com
-NEXT_PUBLIC_PHONE=(31) 99999-9999
-NEXT_PUBLIC_WHATSAPP=5531999999999
+NEXT_PUBLIC_PHONE=(31) 99851-2887
+NEXT_PUBLIC_WHATSAPP=553198512887
 NEXT_PUBLIC_EMAIL=contato@arpmanutencoes.com
 
 # Configurações de Email (para formulário)

@@ -19,7 +19,7 @@ export default function WhatsAppButton() {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '5511999999999'; // Substitua pelo número real
+    const phoneNumber = '553198512887'; // Número do WhatsApp
     const message = 'Olá! Gostaria de solicitar um orçamento para serviços de jardinagem.';
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');

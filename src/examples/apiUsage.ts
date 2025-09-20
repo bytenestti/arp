@@ -7,7 +7,7 @@ export const submitContactExample = async () => {
   const formData = {
     name: 'João Silva',
     email: 'joao@email.com',
-    phone: '(11) 99999-9999',
+    phone: '(31) 99851-2887',
     service: 'poda',
     message: 'Preciso de um orçamento para poda de árvores no meu jardim.'
   };

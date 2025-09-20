@@ -140,7 +140,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-300 placeholder:text-gray-700"
-                  placeholder="(11) 99999-9999"
+                  placeholder="(31) 99851-2887"
                 />
               </div>
 
@@ -240,8 +240,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Telefone</h4>
-                    <p className="text-gray-600">(11) 99999-9999</p>
-                    <p className="text-gray-600">(11) 3333-3333</p>
+                    <p className="text-gray-600">(31) 99851-2887</p>
                   </div>
                 </div>
 
@@ -254,7 +253,6 @@ export default function Contact() {
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">E-mail</h4>
                     <p className="text-gray-600">contato@arpmanutencoes.com</p>
-                    <p className="text-gray-600">orcamento@arpmanutencoes.com</p>
                   </div>
                 </div>
 
@@ -267,8 +265,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">Endereço</h4>
-                    <p className="text-gray-600">São Paulo - SP</p>
-                    <p className="text-gray-600">Atendemos toda a região metropolitana</p>
+                    <p className="text-gray-600">Ouro Preto - MG</p>
+                    <p className="text-gray-600">Atendemos toda a região</p>
                   </div>
                 </div>
 

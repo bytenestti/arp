@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     template: "%s | ARP Manutenções"
   },
   description: "Serviços profissionais de poda e corte de árvores, jardinagem e limpeza pós-obra em Ouro Preto/MG. Transformamos seu espaço com qualidade, segurança e experiência de 5+ anos.",
+  icons: {
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   keywords: [
     "poda de árvores",
     "corte de árvores", 
@@ -107,7 +112,7 @@ export default function RootLayout({
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+55-31-99999-9999",
+          "telephone": "+55-31-99851-2887",
           "contactType": "customer service",
           "areaServed": "BR",
           "availableLanguage": "Portuguese"
@@ -120,7 +125,7 @@ export default function RootLayout({
         },
         "sameAs": [
           "https://www.instagram.com/arpmanutencoes",
-          "https://wa.me/5531999999999"
+          "https://wa.me/553198512887"
         ]
       },
       {

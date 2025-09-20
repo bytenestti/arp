@@ -63,8 +63,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <ul className="space-y-2">
               <li className="text-gray-300">
-                <span className="block">(31) 99999-9999</span>
-                <span className="block">(31) 3333-3333</span>
+                <span className="block">(31) 99851-2887</span>
               </li>
               <li className="text-gray-300">
                 contato@arpmanutencoes.com

@@ -50,19 +50,19 @@
 ## 🎯 Keywords Principais
 
 ### **Primárias**
-- poda de árvores São Paulo
-- corte de árvores SP
+- poda de árvores Ouro Preto
+- corte de árvores MG
 - jardinagem profissional
 - limpeza pós-obra
 
 ### **Secundárias**
 - manutenção de jardim
-- paisagismo São Paulo
+- paisagismo Ouro Preto
 - poda árvores grande porte
 - jardinagem residencial
 
 ### **Long-tail**
-- serviços de poda de árvores em São Paulo
+- serviços de poda de árvores em Ouro Preto
 - empresa de jardinagem profissional
 - limpeza pós-obra residencial
 

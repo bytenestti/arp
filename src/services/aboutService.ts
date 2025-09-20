@@ -39,9 +39,9 @@ export class AboutService {
    *       "description": "Cada projeto é único. Desenvolvemos soluções personalizadas para atender às suas necessidades específicas."
    *     },
    *     "contact_info": {
-   *       "phone": ["(11) 99999-9999", "(11) 3333-3333"],
-   *       "email": ["contato@arpmanutencoes.com", "orcamento@arpmanutencoes.com"],
-   *       "address": "São Paulo - SP - Atendemos toda a região metropolitana",
+   *       "phone": ["(31) 99851-2887"],
+   *       "email": ["contato@arpmanutencoes.com"],
+   *       "address": "Ouro Preto - MG - Atendemos toda a região",
    *       "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
    *     },
    *     "statistics": {
@@ -101,9 +101,9 @@ export class AboutService {
         description: 'Cada projeto é único. Desenvolvemos soluções personalizadas para atender às suas necessidades específicas.'
       },
       contact_info: {
-        phone: ['(11) 99999-9999', '(11) 3333-3333'],
-        email: ['contato@arpmanutencoes.com', 'orcamento@arpmanutencoes.com'],
-        address: 'São Paulo - SP - Atendemos toda a região metropolitana',
+        phone: ['(31) 99851-2887'],
+        email: ['contato@arpmanutencoes.com'],
+        address: 'Ouro Preto - MG - Atendemos toda a região',
         working_hours: ['Segunda a Sexta: 7h às 18h', 'Sábado: 7h às 12h']
       },
       statistics: {
@@ -148,9 +148,9 @@ export class AboutService {
    * Exemplo de resposta da API FastAPI:
    * {
    *   "contact_info": {
-   *     "phone": ["(11) 99999-9999", "(11) 3333-3333"],
-   *     "email": ["contato@arpmanutencoes.com", "orcamento@arpmanutencoes.com"],
-   *     "address": "São Paulo - SP - Atendemos toda a região metropolitana",
+   *     "phone": ["(31) 99851-2887"],
+   *     "email": ["contato@arpmanutencoes.com"],
+   *     "address": "Ouro Preto - MG - Atendemos toda a região",
    *     "working_hours": ["Segunda a Sexta: 7h às 18h", "Sábado: 7h às 12h"]
    *   }
    * }
